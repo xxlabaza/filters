@@ -20,7 +20,7 @@ class MyFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext()
         HttpServletRequest request = ctx.getRequest()
 
-        log.info(String.format("%s request to %s", request.method, request.requestURL.toString()))
+        log.info(String.format('MY_FILTER\n%s request to %s', request.method, request.requestURL.toString()))
 
         return Boolean.TRUE
     }
